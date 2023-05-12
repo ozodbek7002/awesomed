@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "'Montserrat', sans-serif;";
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap') format(truetup);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: "'Montserrat', sans-serif;";
+}
+.header{
+    height: 95vh;
+    background-image: url(./rasm_2.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+    position: relative;
+    animation-name: bg-header;
+    animation-duration: 1.25s;
+}
+@keyframes bg-header{
+    0%{
+        opacity: 0;
+        clip-path: polygon(0 100vh, 100% 0, 100% 0, 0 100%);
+        transform: scale(0.8);
+    }
+    80%{
+        background-image: linear-gradient(
+            45deg,
+            rgb(228, 122, 255)
+            rgb(253, 122 ,122)
+            ),
+            url('./rasm_2.jpg');
+             transform: scale(1. 090);
+             background-blend-mode: color;
+    }
+}
+.logo-box{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    animation-delay: 00.75s;
+}
+.logo{
+    height: 4rem;
+    border-radius: 6px;
+    animation-name: logo-anim;
+    animation-duration: 0.75s;
+}
+@keyframes logo-anim{
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.3rem);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.heading-primary{
+    color: #ffff;
+    text-transform: uppercase;
+}
+.heading-primary-main{
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    font-size: 8rem;
+    display: block;
+    animation: moveInLeft;
+    animation-duration: 1s;
+}
+@keyframes moveInLeft{
+    0% {
+        opacity: 0; 
+        transform: translateX(-10rem);  
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);  
+    }
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.43rem;
+    font-weight: 700;
+    animation: moveInRight;
+    animation-duration: 1s;
+}
+@keyframes moveInRight{
+    0% {
+        opacity: 0; 
+        transform: translateX(10rem);  
+    }
+    80% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);  
+    }
+}
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
